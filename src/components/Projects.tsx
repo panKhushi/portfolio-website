@@ -37,13 +37,6 @@ const Projects = () => {
       tags: ['Machine Learning', 'Python', 'Data Analysis'],
       github: 'https://github.com/panKhushi/Customer-Churn-Prediction',
     },
-    {
-      title: 'Credit Risk Prediction',
-      description: "Machine learning model that predicts whether a loan applicant is likely to default based on financial and demographic data, helping banks reduce lending risk.",
-      image: "https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=600",
-      tags: ["Python", "Machine Learning", "Scikit-learn", "Pandas", "NumPy", "Classification"],
-      github: "https://github.com/panKhushi/Credit-Risk-Prediction-",
-    }
   ];
 
   return (
