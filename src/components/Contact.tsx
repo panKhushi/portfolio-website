@@ -80,7 +80,7 @@ const response = await fetch("https://formspree.io/f/xeeragbj", {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
@@ -118,6 +118,7 @@ const response = await fetch("https://formspree.io/f/xeeragbj", {
 
             <button
               type="submit"
+              onClick={(e) => handleSubmit(e as any)}
               className="w-full px-8 py-4 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:bg-cyan-300 transition-all duration-300 shadow-lg shadow-cyan-400/50 flex items-center justify-center space-x-2 group"
             >
               <span>Send Message</span>
