@@ -1,21 +1,11 @@
-import { useState } from 'react';
+
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
+ 
 
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+
 
   return (
     <section id="contact" className="py-20 px-6">
@@ -76,8 +66,6 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
                 required
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
               />
@@ -85,8 +73,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
+                
                 required
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
               />
@@ -96,8 +83,7 @@ const Contact = () => {
               type="text"
               name="subject"
               placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
+              
               required
               className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
             />
@@ -105,8 +91,6 @@ const Contact = () => {
             <textarea
               name="message"
               placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
               required
               rows={6}
               className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
