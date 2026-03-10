@@ -8,15 +8,15 @@ const Contact = () => {
   e.preventDefault();
 
   const form = e.currentTarget;
-  const data = new FormData(form);
+  const formData = new FormData(form);
 
-  const response = await fetch("https://formspree.io/f/xeeragbj", {
-    method: "POST",
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  });
+const response = await fetch("https://formspree.io/f/xeeragbj", {
+  method: "POST",
+  headers: {
+    "Accept": "application/json"
+  },
+  body: formData
+});
 
   if (response.ok) {
     alert("Message sent successfully!");
