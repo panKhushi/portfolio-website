@@ -60,7 +60,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form action="https://formspree.io/f/xeeragbj" method="POST" className="space-y-6">
+          <form action="https://formspree.io/f/xeeragbj" method="POST" target="_blank" className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
