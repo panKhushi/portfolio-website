@@ -4,7 +4,27 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 const Contact = () => {
  
 
-  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const data = new FormData(form);
+
+  const response = await fetch("https://formspree.io/f/xeeragbj", {
+    method: "POST",
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  if (response.ok) {
+    alert("Message sent successfully!");
+    form.reset();
+  } else {
+    alert("Something went wrong.");
+  }
+};
 
 
   return (
@@ -60,7 +80,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form action="https://formspree.io/f/xeeragbj" method="POST" target="_blank" className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
